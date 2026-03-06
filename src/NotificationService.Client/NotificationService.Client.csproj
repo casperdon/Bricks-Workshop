@@ -4,10 +4,12 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>NotificationService.Client</PackageId>
+	<Title>ThunderBean.NotificationService.Client</Title>
+    <PackageId>ThunderBean.NotificationService.Client</PackageId>
     <Version>1.0.0</Version>
     <Description>Low-level HTTP client for the Notification Service API (workshop pre-built package).</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<RepositoryUrl>https://github.com/casperdon/Bricks-Workshop</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
