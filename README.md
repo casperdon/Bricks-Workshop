@@ -81,3 +81,16 @@ Then point participants' `nuget.config` at the local folder. Alternatively, just
 ## For Participants
 
 See [workshop/README.md](workshop/README.md) for instructions.
+
+
+## Todo:
+- [] Nele op de hoogte brengen dat laptop nodig is.
+- [] Powerpoint maken om te presenteren bij de uitleg.
+- [] Deze oefening uitwerken en voorbeeldimplementatie maken.
+- [] Bulletpoint over wat we gaan bespreken. -> verhaallijn.
+
+### Verhaallijn:
+1. Hoe zijn we hier vandaag geraakt.
+2. We gaan een bibliotheek bouwen van customizable libraries.
+3. We zijn tegen een hoop dingen aangelopen bij het bouwen van deze bibliotheken.
+4. Voorbeeld van hoe we de problemen hebben aangepakt in Bricks en startup workshop.
