@@ -12,7 +12,7 @@ public static class NotificationEndpoints
         INotificationStore store,
         IConfiguration config) =>
         {
-            string[] validChannels = ["email", "in-app", "push"];
+            string[] validChannels = ["email", "sms", "push"];
 
             if (!validChannels.Contains(request.Channel?.ToLowerInvariant()))
                 return Results.BadRequest(new { error = $"Invalid channel. Supported values: {string.Join(", ", validChannels)}" });

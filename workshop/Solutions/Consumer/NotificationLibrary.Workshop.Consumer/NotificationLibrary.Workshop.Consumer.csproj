@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="NSwag.AspNetCore" Version="14.6.3" />
+	  <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\US2\NotificationLibrary.Workshop.Polly\NotificationLibrary.Workshop.Polly.csproj" />
+	  <ProjectReference Include="..\..\US2\NotificationLibrary.Workshop\NotificationLibrary.Workshop.csproj" />
+	  <!--<ProjectReference Include="..\..\US1\NotificationLibrary.Workshop\NotificationLibrary.Workshop.csproj" />-->
+  </ItemGroup>
+
+</Project>

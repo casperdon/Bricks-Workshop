@@ -6,4 +6,15 @@
   <Folder Name="/workshop/">
     <Project Path="workshop/NotificationLibrary.Workshop/NotificationLibrary.Workshop.csproj" />
   </Folder>
+  <Folder Name="/workshop/Solutions/" />
+  <Folder Name="/workshop/Solutions/Consumer/">
+    <Project Path="workshop/Solutions/Consumer/NotificationLibrary.Workshop.Consumer/NotificationLibrary.Workshop.Consumer.csproj" Id="c9aaaed5-3a25-4145-a239-29bf34998445" />
+  </Folder>
+  <Folder Name="/workshop/Solutions/US1/">
+    <Project Path="workshop/Solutions/US1/NotificationLibrary.Workshop.csproj" />
+  </Folder>
+  <Folder Name="/workshop/Solutions/US2/">
+    <Project Path="workshop/Solutions/US2/NotificationLibrary.Workshop.Polly/NotificationLibrary.Workshop.Polly.csproj" Id="8b62f50b-31cb-4b72-90e6-941fdfc78a8e" />
+    <Project Path="workshop/Solutions/US2/NotificationLibrary.Workshop/NotificationLibrary.Workshop.csproj" />
+  </Folder>
 </Solution>
