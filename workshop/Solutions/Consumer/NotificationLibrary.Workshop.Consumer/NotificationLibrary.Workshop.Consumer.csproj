@@ -12,9 +12,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\US2\NotificationLibrary.Workshop.Polly\NotificationLibrary.Workshop.Polly.csproj" />
-	  <ProjectReference Include="..\..\US2\NotificationLibrary.Workshop\NotificationLibrary.Workshop.csproj" />
+	  <!--US1-->
 	  <!--<ProjectReference Include="..\..\US1\NotificationLibrary.Workshop\NotificationLibrary.Workshop.csproj" />-->
+
+	  <!--US2-->
+	  <!--<ProjectReference Include="..\..\US2\NotificationLibrary.Workshop.Polly\NotificationLibrary.Workshop.Polly.csproj" />-->
+	  <!--<ProjectReference Include="..\..\US2\NotificationLibrary.Workshop\NotificationLibrary.Workshop.csproj" />-->
+	  
+	  <!--US3-->
+	  <ProjectReference Include="..\..\US3\NotificationLibrary.Workshop.Polly\NotificationLibrary.Workshop.Polly.csproj" />
+	  <ProjectReference Include="..\..\US3\NotificationLibrary.Workshop\NotificationLibrary.Workshop.csproj" />
+	  <ProjectReference Include="..\..\US3\NotificationLibrary.Workshop.Sms\NotificationLibrary.Workshop.Sms.csproj" />
+	  <ProjectReference Include="..\..\US3\NotificationLibrary.Workshop.Email\NotificationLibrary.Workshop.Email.csproj" />
   </ItemGroup>
 
 </Project>

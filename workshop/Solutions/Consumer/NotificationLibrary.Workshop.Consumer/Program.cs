@@ -1,5 +1,7 @@
 using NotificationLibrary.Workshop;
+using NotificationLibrary.Workshop.Email;
 using NotificationLibrary.Workshop.Polly;
+using NotificationLibrary.Workshop.Sms;
 using Polly;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +17,7 @@ builder.Services.AddNotifications(builder.Configuration, options =>
 */
 
 // US2
+/*
 builder.Services.AddNotifications(builder.Configuration, options =>
 {
     options.WithNotificationServiceLifetime(ServiceLifetime.Scoped)
@@ -25,6 +28,22 @@ builder.Services.AddNotifications(builder.Configuration, options =>
                 .WithTimeout(TimeSpan.FromSeconds(30))
                 .WithRetryDelay(TimeSpan.FromSeconds(5))
                 .WithDelayBackoffType(DelayBackoffType.Exponential));
+});
+*/
+
+// US3
+builder.Services.AddNotifications(builder.Configuration, options =>
+{
+    options.WithNotificationServiceLifetime(ServiceLifetime.Scoped)
+           .ConfigureApiAccess("Notifications")
+           .AddPolly(p => p
+                .WithMaxRetryCount(3)
+                .WithUseJitter(true)
+                .WithTimeout(TimeSpan.FromSeconds(30))
+                .WithRetryDelay(TimeSpan.FromSeconds(5))
+                .WithDelayBackoffType(DelayBackoffType.Exponential))
+           .AddSms()
+           .AddEmail();
 });
 
 builder.Services.AddControllers();

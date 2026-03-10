@@ -17,4 +17,10 @@
     <Project Path="workshop/Solutions/US2/NotificationLibrary.Workshop.Polly/NotificationLibrary.Workshop.Polly.csproj" Id="8b62f50b-31cb-4b72-90e6-941fdfc78a8e" />
     <Project Path="workshop/Solutions/US2/NotificationLibrary.Workshop/NotificationLibrary.Workshop.csproj" />
   </Folder>
+  <Folder Name="/workshop/Solutions/US3/">
+    <Project Path="workshop/Solutions/US3/NotificationLibrary.Workshop.Email/NotificationLibrary.Workshop.Email.csproj" Id="fc6ad282-8034-4cb7-bfbf-2b0708ce2443" />
+    <Project Path="workshop/Solutions/US3/NotificationLibrary.Workshop.Polly/NotificationLibrary.Workshop.Polly.csproj" />
+    <Project Path="workshop/Solutions/US3/NotificationLibrary.Workshop.Sms/NotificationLibrary.Workshop.Sms.csproj" />
+    <Project Path="workshop/Solutions/US3/NotificationLibrary.Workshop/NotificationLibrary.Workshop.csproj" />
+  </Folder>
 </Solution>
