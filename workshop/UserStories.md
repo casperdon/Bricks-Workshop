@@ -25,18 +25,18 @@ As a User i want the Notification Service to provide different implementations f
 - The library should provide implementations for each notification type, and the DI setup should allow consumers to inject the appropriate implementation based on their needs.
 - The library should allow consumers to enable or disable specific notification types through `NotificationLibraryOptions`.
 
-# User Story 4 — Multi-tenancy and API Keys
-As a User i want the Notification Service to support multi-tenancy by allowing me to specify the API key on a per-request basis. I have multiple tenants using the same application, and each tenant has its own API key for the Notification Service. I want to be able to specify the API key when sending a notification, rather than having it fixed at startup. This way, I can ensure that notifications are sent using the correct credentials for each tenant. I also want to be able to fall back to a default API key if none is specified for a particular request.
-
--- Developer Notes:
-- The library should allow consumers to specify the API key on a per-request basis, perhaps through an overload of the send method or through a context object.
-- The library should also support a default API key that can be configured at startup, which will be used if no per-request key is provided.
-- This requirement may affect the design of the `INotificationService` interface and how the API key is passed through to the underlying HTTP client.
-
-# User Story 5 — Queueing and Background Processing
+# User Story 4 — Queueing and Background Processing
 As a User i want the Notification Service to support queueing notifications for background processing. I have scenarios where I want to send notifications asynchronously, without blocking the main thread of my application. I want the library to provide a way to enqueue notifications, which can then be processed by a background worker or hosted service. I also want to be able to configure the queueing mechanism, such as using an in-memory queue for simple scenarios or integrating with a message broker like RabbitMQ or Azure Service Bus for more complex setups. Additionally, I want the library to handle retries and failures for queued notifications, ensuring that they are eventually sent even if there are transient issues.
 
 -- Developer Notes:
 - The library should provide a mechanism for enqueuing notifications, which can be processed by a background worker or hosted service.
 - The queueing mechanism should be configurable, allowing for different implementations such as in-memory queues or message brokers like RabbitMQ or Azure Service Bus.
 - The library should handle retries and failures for queued notifications, ensuring that they are eventually sent even if there are transient issues.
+
+# User Story 5 — Multi-tenancy and API Keys
+As a User i want the Notification Service to support multi-tenancy by allowing me to specify the API key on a per-request basis. I have multiple tenants using the same application, and each tenant has its own API key for the Notification Service. I want to be able to specify the API key when sending a notification, rather than having it fixed at startup. This way, I can ensure that notifications are sent using the correct credentials for each tenant. I also want to be able to fall back to a default API key if none is specified for a particular request.
+
+-- Developer Notes:
+- The library should allow consumers to specify the API key on a per-request basis, perhaps through an overload of the send method or through a context object.
+- The library should also support a default API key that can be configured at startup, which will be used if no per-request key is provided.
+- This requirement may affect the design of the `INotificationService` interface and how the API key is passed through to the underlying HTTP client.
