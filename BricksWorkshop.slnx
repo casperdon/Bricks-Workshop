@@ -23,4 +23,13 @@
     <Project Path="workshop/Solutions/US3/NotificationLibrary.Workshop.Sms/NotificationLibrary.Workshop.Sms.csproj" />
     <Project Path="workshop/Solutions/US3/NotificationLibrary.Workshop/NotificationLibrary.Workshop.csproj" />
   </Folder>
+  <Folder Name="/workshop/Solutions/US4/">
+    <Project Path="workshop/Solutions/US4/NotificationLibrary.Workshop.Email/NotificationLibrary.Workshop.Email.csproj" />
+    <Project Path="workshop/Solutions/US4/NotificationLibrary.Workshop.Polly/NotificationLibrary.Workshop.Polly.csproj" />
+    <Project Path="workshop/Solutions/US4/NotificationLibrary.Workshop.Queue.InMemory/NotificationLibrary.Workshop.Queue.InMemory.csproj" Id="df0c9137-edd3-4654-914d-42ba0c5f4754" />
+    <Project Path="workshop/Solutions/US4/NotificationLibrary.Workshop.Queue.RabbitMQ/NotificationLibrary.Workshop.Queue.RabbitMQ.csproj" Id="7affa144-94a7-42d2-94f4-e3a1c394daa2" />
+    <Project Path="workshop/Solutions/US4/NotificationLibrary.Workshop.Queue/NotificationLibrary.Workshop.Queue.csproj" Id="cce64230-7ca0-4535-a42a-5a238358fc8f" />
+    <Project Path="workshop/Solutions/US4/NotificationLibrary.Workshop.Sms/NotificationLibrary.Workshop.Sms.csproj" />
+    <Project Path="workshop/Solutions/US4/NotificationLibrary.Workshop/NotificationLibrary.Workshop.csproj" />
+  </Folder>
 </Solution>

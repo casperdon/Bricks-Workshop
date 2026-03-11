@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NotificationLibrary.Workshop.Queue.Services;
 using NotificationLibrary.Workshop.Service;
 
 namespace NotificationLibrary.Workshop.Consumer.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class NotificationController(INotificationService notificationService) : ControllerBase
+public class NotificationController(INotificationService notificationService, IDistributedNotificationService distributedNotificationService) : ControllerBase
 {
     [HttpGet]
     public async Task<IActionResult> GetAll([FromQuery] string? recipientId, [FromQuery] string? channel, [FromQuery] string? status, CancellationToken cancellationToken)
@@ -28,5 +29,12 @@ public class NotificationController(INotificationService notificationService) : 
     {
         var response = await notificationService.SendAsync(recipientId, channel, subject, body, cancellationToken);
         return Ok(response);
+    }
+
+    [HttpPost("enqueue")]
+    public async Task<IActionResult> Enqueue(string recipientId, string channel, string subject, string body, CancellationToken cancellationToken)
+    {
+        await distributedNotificationService.EnqueueAsync(recipientId, channel, subject, body, cancellationToken);
+        return Ok();
     }
 }

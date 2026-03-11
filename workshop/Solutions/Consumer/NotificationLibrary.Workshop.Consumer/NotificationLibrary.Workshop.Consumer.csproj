@@ -20,10 +20,19 @@
 	  <!--<ProjectReference Include="..\..\US2\NotificationLibrary.Workshop\NotificationLibrary.Workshop.csproj" />-->
 	  
 	  <!--US3-->
-	  <ProjectReference Include="..\..\US3\NotificationLibrary.Workshop.Polly\NotificationLibrary.Workshop.Polly.csproj" />
-	  <ProjectReference Include="..\..\US3\NotificationLibrary.Workshop\NotificationLibrary.Workshop.csproj" />
-	  <ProjectReference Include="..\..\US3\NotificationLibrary.Workshop.Sms\NotificationLibrary.Workshop.Sms.csproj" />
-	  <ProjectReference Include="..\..\US3\NotificationLibrary.Workshop.Email\NotificationLibrary.Workshop.Email.csproj" />
+	  <!--<ProjectReference Include="..\..\US3\NotificationLibrary.Workshop.Polly\NotificationLibrary.Workshop.Polly.csproj" />-->
+	  <!--<ProjectReference Include="..\..\US3\NotificationLibrary.Workshop\NotificationLibrary.Workshop.csproj" />-->
+	  <!--<ProjectReference Include="..\..\US3\NotificationLibrary.Workshop.Sms\NotificationLibrary.Workshop.Sms.csproj" />-->
+	  <!--<ProjectReference Include="..\..\US3\NotificationLibrary.Workshop.Email\NotificationLibrary.Workshop.Email.csproj" />-->
+
+	  <!--US4-->
+	  <ProjectReference Include="..\..\US4\NotificationLibrary.Workshop.Polly\NotificationLibrary.Workshop.Polly.csproj" />
+	  <ProjectReference Include="..\..\US4\NotificationLibrary.Workshop\NotificationLibrary.Workshop.csproj" />
+	  <ProjectReference Include="..\..\US4\NotificationLibrary.Workshop.Sms\NotificationLibrary.Workshop.Sms.csproj" />
+	  <ProjectReference Include="..\..\US4\NotificationLibrary.Workshop.Email\NotificationLibrary.Workshop.Email.csproj" />
+	  <ProjectReference Include="..\..\US4\NotificationLibrary.Workshop.Queue\NotificationLibrary.Workshop.Queue.csproj" />
+	  <ProjectReference Include="..\..\US4\NotificationLibrary.Workshop.Queue.InMemory\NotificationLibrary.Workshop.Queue.InMemory.csproj" />
+	  <ProjectReference Include="..\..\US4\NotificationLibrary.Workshop.Queue.RabbitMQ\NotificationLibrary.Workshop.Queue.RabbitMQ.csproj" />
   </ItemGroup>
 
 </Project>

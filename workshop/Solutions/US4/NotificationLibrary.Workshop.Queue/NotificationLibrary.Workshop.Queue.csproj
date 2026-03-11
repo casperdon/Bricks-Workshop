@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NotificationLibrary.Workshop\NotificationLibrary.Workshop.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="NotificationLibrary.Workshop.Queue.InMemory" />
+		<InternalsVisibleTo Include="NotificationLibrary.Workshop.Queue.RabbitMQ" />
+	</ItemGroup>
+
+</Project>
