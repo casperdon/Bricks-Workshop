@@ -133,3 +133,6 @@ It will throw `NotificationApiException` on non-success HTTP responses.
 - **`IOptions<T>`** is the standard .NET way to bind configuration sections. Where does it fall short for Card 5?
 - **Don't fake `HttpClient`** for Card 3 — fake `INotificationService` instead. That's the point of having an interface.
 - For retry, consider **Polly** (via `Microsoft.Extensions.Http.Resilience` or the classic `Polly` package).
+
+## Solutions
+After the workshop, check out the [Solutions folder](Solutions/README.md) for one possible way to implement the library. It's organized by user story, so you can see how the design evolves as new requirements are added.
