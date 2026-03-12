@@ -1,4 +1,4 @@
-# Workshop: Build a Library for Everyone
+# Workshop: Don’t Reinvent the Brick: Reusable Libraries in .NET
 
 > This is the participant folder. Everything you need to complete the workshop exercise is here.
 
@@ -6,18 +6,18 @@
 
 You and your team have been handed a pre-built **Notification Service** REST API and a low-level client package (`NotificationService.Client`) that wraps it.
 
-**Your job**: Build a proper library on top of that client — one that five different internal teams can all use with their own requirements.
+**Your job**: Build a proper library on top of that client — one that many different internal teams can all use with their own requirements.
 
-Read the [Consumer Requirement Cards](ConsumerCards.md) carefully before you write a single line of code.
+Read the [UserStories](UserStories.md) carefully before you write a single line of code.
 
 ---
 
-## Step 1 — Read the cards (5 minutes)
+## Step 1 — Read the user stories (5 minutes)
 
-Open [ConsumerCards.md](ConsumerCards.md). Read all five cards as a team. Note the tensions between them. You don't need to solve everything — but you need to *understand* the problem before you design.
+Open [UserStories.md](UserStories.md). Read all five user stories as a team. Note the tensions between them. You don't need to solve everything — but you need to *understand* the problem before you design.
 
 Key questions:
-- Which cards have **conflicting** expectations?
+- Which user stories have **conflicting** expectations?
 - Which design decisions have to be made **first** because everything else depends on them?
 
 ---
@@ -26,16 +26,16 @@ Key questions:
 
 Before touching the skeleton files, agree as a team on:
 
-1. **The interface shape** — what does `INotificationService` look like? How does Team E's per-request API key affect it?
+1. **The interface shape** — what does `INotificationService` look like?
 2. **The options class** — what is required? What has defaults? Builder pattern or flat properties?
-3. **The DI registration** — one method? Two? How does Team D's logging requirement interact with your registration?
+3. **The DI registration** — one method? Two? With optional parameters?
 
 ---
 
 ## Step 3 — Implement (15–20 minutes)
 
 The starter project (`NotificationLibrary.Workshop/`) already references:
-- `NotificationService.Client` — the raw API client
+- `NotificationService.Client` (`ThunderBean.NotificationService.Client`) — the raw API client
 - `Microsoft.Extensions.DependencyInjection.Abstractions`
 - `Microsoft.Extensions.Http` (for `IHttpClientFactory`)
 - `Microsoft.Extensions.Logging.Abstractions`
@@ -48,13 +48,13 @@ Skeleton files to fill in:
 | `NotificationLibraryOptions.cs` | Configuration options |
 | `ServiceCollectionExtensions.cs` | DI registration — the "one line in Program.cs" |
 
-You will need to add an implementation class yourself (e.g., `NotificationService.cs`).
+A basic implementation class (`NotificationService.cs`) has been provided, since the focus of the workshop is on the *library design* rather than the API integration.
 
 ---
 
 ## Notification Service API
 
-The API is already running. Base URL: **http://localhost:5218** (HTTP) or **https://localhost:7078** (HTTPS).
+The API is already running. Base URL: **http://localhost:7000** (HTTP) or **https://localhost:7001** (HTTPS).
 
 Available API keys (for testing):
 - `workshop-key-alpha`
@@ -82,7 +82,7 @@ All endpoints require the `X-Api-Key` header.
 }
 ```
 
-Valid channels: `"email"`, `"in-app"`, `"push"`
+Valid channels: `"email"`, `"sms"`, `"push"`
 
 ### POST /notifications — Response (201 Created)
 

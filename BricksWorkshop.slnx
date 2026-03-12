@@ -1,9 +1,15 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="src/NotificationService.Api/NotificationService.Api.csproj" />
     <Project Path="src/NotificationService.Client/NotificationService.Client.csproj" />
   </Folder>
   <Folder Name="/workshop/">
+    <File Path="workshop/README.md" />
+    <File Path="workshop/UserStories.md" />
+    <Project Path="workshop/NotificationLibrary.Workshop.Consumer/NotificationLibrary.Workshop.Consumer.csproj" />
     <Project Path="workshop/NotificationLibrary.Workshop/NotificationLibrary.Workshop.csproj" />
   </Folder>
   <Folder Name="/workshop/Solutions/" />
