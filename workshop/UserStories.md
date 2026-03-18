@@ -5,10 +5,10 @@ This File contains the User Stories for the Workshop. Each story will extend the
 As a User i want to be able to inject the Notification Service into my application using dependency injection and configure the way it behaves. I Want to be able to specify the API key and base URL for the Notification Service in my appsettings.json file. I also want to be able to configure the underlying HttpClient used by the Notification Service, for example to set timeouts or add custom handlers.
 
 -- Developer Notes:
-- The library should provide an extension method for `IServiceCollection` that registers the necessary services.
+- The library should provide an extension method for `IServiceCollection` that registers the necessary services. This can be added in the provided `ServiceCollectionExtensions.cs` file.
 - The library should use `IHttpClientFactory` to manage `HttpClient` instances, allowing consumers to configure it as needed.
 - The API key and base URL should be configurable through a strongly-typed options class that binds to the appropriate section in `appsettings.json`.
-- This is configured using `NotificationLibraryOptions`.
+- This is configured using the already provided `NotificationLibraryOptions.cs`.
 
 # User Story 2 — Resilience and Retries
 As a User i want the Notification Service to automatically retry failed requests with an exponential backoff strategy. I have observed that the API sometimes returns transient failures, and I want to ensure that my application can handle these gracefully without having to implement retry logic myself. I want to be able to configure the number of retry attempts and the base delay for the backoff strategy, I also want to be able to turn this feature on or off.
